@@ -21,12 +21,13 @@ Workflow pipeline:
 
 1. Deployed a web scraper to gather practice time (Singapore race) from the official F1 auto-sport website. ( https://www.formula1.com/)
 
-2.Data pre-processing
+2. Data pre-processing
 
-A.	Data cleaning
-B.	Exploratory Data Analysis
-C.	Weather API
-D.	Feature Engineering
+a)	Data cleaning
+b)	Exploratory Data Analysis
+c)	Weather API
+d)	Feature Engineering
+
 
 3. Machine learning Logistic Regression model (Best suited for my binary classification problem)
 
@@ -39,6 +40,9 @@ Getting inspired by watching Netflix F1 documentary movies with my son, I decide
 
 ![Figure-1 project flow Diagram](images/Picture1.png)
 
+![Figure-2 ML Models](images/Picture2.png)
+
+![Figure-3 Overall independent variables](images/Picture3.png)
 
 Part1: 
 
@@ -56,6 +60,14 @@ Part-2:
 Part-3:
 
 Merging the information appropriately without losing any vital characteristics of the race.
+
+Final data frame would look like as follows:
+
+![Figure-4 Sample data frame](images/Picture4.png)
+
+![Figure-5 Sample data frame(continuation)](images/Picture5.png)
+
+![Figure-6 Sample data frame(continuation)](images/Picture6.png)
 
 Since there were 10 years of Singapore Grand Prix data, and each race has ~20 drivers each, which gives me 200 rows. As we know, machine learning models work well with large data sets, which goes minimally to around 1000 k rows/observation. I supplemented my data sets with weather data, practice time. This would help us to do more feature engineering rather than an increase in data points suitable for more machine learning models. I have started my analysis with simple machine learning algorithms such as logistic regression, decision trees, K-nearest neighbors, which handles small datasets.
 
@@ -75,7 +87,10 @@ Finally, we had our data ready to feed into the model. My total dataset will be 
 
 Results
 
-However, the logistic regression shows the predicted probability of the drivers to get more level of confidence.
+However, the logistic regression shows the predicted probability of the drivers to get the level of confidence.
+
+
+![Figure-7 Predicted probabilities](images/Picture7.png)
 
 Conclusion: 
 
