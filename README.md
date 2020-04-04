@@ -5,7 +5,9 @@ Problem Space:
 
 The Marina Bay Street Circuit, also known as the “Singapore Street Circuit” is a street circuit around Singapore’s Marina Bay, which has been hosting the Singapore Grand Prix every year since 2008. Due to Singapore’s yearly high temperatures, its humidity, and the uneven nature of the street track and the heavy braking zones, the Singapore Circuit represents a physical challenge for both the drivers and cars and it is probably the most demanding race on the F1 calendar. Moreover, it is the longest race of Formula One Grand Prix season, taking up to two hours to complete.
 
-The objective of this project is to find the potential drivers for the upcoming Singapore F1 season.
+Part-1:
+
+The objective of this part of this project is to find the potential drivers for the upcoming Singapore F1 season.
         
 Key Technologies Used:
 
@@ -109,6 +111,237 @@ Future extension:
 2. Driver statistics such as Total lifetime points, lifetime winning, winning percentage, total races participated makes the model overfitting when the currently active drivers are filtered for the predictive modeling. Naive base algorithm will be tested with more driver-specific parameters.
 
 3. Hypothesis will be derived for more analysis. Ex: Overtaking in the race affects the race points.
+
+Part-2:
+
+Data Analysis of Singapore Grand Prix race
+
+Problem Space:
+
+The objective of this part is to form the hypothesis about the racers' performance with different attributes of the race, analyze the data to prove it, or reject it based on the nature of the data. This part also finds different clusters in driver points, starting grids and average time spent at pit stops.
+
+Key Technologies Used:
+
+Scikit python
+
+Data Analysis: Singapore season 2019
+
+The following figure shows age distribution in Singapore season 2019. The average age of racers is 35.
+
+Age Distribution in Singapore race
+
+![Figure-8](images/Picture8.png)
+
+Driver points versus constructor points distribution in Singapore race 
+
+
+![Figure-9](images/Picture9.png)
+
+
+Findings:
+
+Constructor points are distributed in the range of 1200 to 3000; however, driver points are distributed between 500 to 1500.
+
+Clustering between driver_id, starting grid in Singapore race
+
+![Figure-10](images/Picture10.png)
+Figure-10 Clustering between driver_id, starting grid in Singapore race
+
+
+Findings:
+
+The average starting grid over 10 years is a vital parameter,was calculated. There were three different clusters. The mean starting grid for the drivers whose id is 1 to 150 were able to start less than 10 position. Drivers whose id s were in the range of 800 were able to start mostly from 12 to 20 position.
+
+
+Q: Who is the leading racer in Singapore season?
+
+Bar graph on driver points across years in Singapore race
+
+![Figure-11](images/Picture11.png)
+
+Figure-11 driver points across years in Singapore race
+
+Findings:
+
+Top 5 drivers in Singapore season:
+1.	Lewis
+2.	Sebastian
+3.	Nico
+4.	Fernando
+5.	Kimi
+
+Clustering between drivers and their points 
+
+
+![Figure-12](images/Picture12.png)
+Figure-12 Clustering between drivers and their points
+
+Findings:
+
+Drivers whose ids are 100 are scored high. Drivers whose id are in the range of 800 scores are moderate.
+
+Clustering between starting grid and points 
+
+
+![Figure-13](images/Picture13.png)
+Figure-13 Clustering between starting grid and points
+
+
+Findings:
+
+The drivers who have started in less than 10 grids were able to score high.
+
+
+Clustering between total time at pit stop versus total_points
+
+
+
+![Figure-14](images/Picture14.png)
+Figure-14 Clustering between total time at pit stop versus total_points
+
+
+Findings:
+
+Drivers who stopped on an average of less than 25000(0.41 minute) milliseconds were able to reach the ending position faster and secure high points.
+
+
+K means clustering prediction. 
+
+![Figure-15](images/Picture15.png)
+Figure-15 K-means Clustering between 
+
+
+Findings:
+
+There are 3 clusters.
+Drivers who stopped less than 10000 ms, likely to have a lower score.
+Drivers who stopped in between 11000ms to 25000 ms are likely to score high points.
+Divers who stopped in between 26000 ns to 30000 ms are likely to score up to moderate points.
+
+Gaussian Model clustering
+
+![Figure-16](images/Picture16.png)
+Figure-16 Gaussian Clustering between 
+
+Findings:
+
+There are 2 clusters.
+Drivers who stopped less than 15000 ms are more likely to have a lower score.
+Drivers who stopped in between 15000ms to 30000 ms can score high points.
+
+Clustering on drivers age in Singapore race
+
+![Figure-17](images/Picture17.png)
+Figure-17 Clusters in drivers age in Singapore race
+
+
+Findings:
+
+There are 2 clusters.
+
+1.	Drivers whose age is between 35 to 50
+2.	Drivers whose age is between 20 to 35
+
+Clustering between starting grid versus ending grid
+
+![Figure-18](images/Picture18.png)
+Figure-18 Clusters in drivers starting grids
+in Singapore race
+
+Findings:
+
+There are no clusters. Drivers who start at different starting grid were able to reach the ending position. However, it leads us to the question of " how the overtaking of drivers in the race affects the ending position". This question will be answered in subsequent sections.
+
+Practice time distribution in Singapore season
+
+![Figure-19](images/Picture19.png)
+Figure-19 Clusters in drivers age in Singapore race
+
+
+Findings:
+
+Across the 3 different practice sessions, the second practice session seems to faster and easier than the first and third practice session.
+
+Machine Learning Model Results:
+
+Machine learning prediction without "Ending position"
+
+![Figure-20](images/Picture20.png)
+Figure-20 Model performance
+
+Findings:
+
+Looking at the different models, Logistic, Gaussian, RF classifier, and decision tree is giving more accuracy than the Support Vector Machine and K Nearest Neighbours.
+
+Predicted winning probability with driver names for 2019 with the training set (2008 to 2018)
+
+![Figure-21](images/Picture21.png)
+Figure-21 Predicted Model performance
+
+Findings:
+
+Looking at the 3 different winning probability range, Lewis, Sabastian, Max, and other racers has high (99.99%) of winning probability in 2019 Singapore race. Antonio, Romain, Robert has less likely to win in the 2019 Singapore race. Let us see in the following sections how far my predictions are accurate!
+
+
+
+Predicted probability versus actual Singapore season 2019 results
+
+![Figure-22](images/Picture22.png)
+Figure-22 Predicted results versus actual results.
+
+Findings:
+
+Looking at the different winning probability range, Lewis, Sabastian, Max, and other racers have high (99.99%) of winning probability in 2019 Singapore race, and it is true when we see the actual 2019 results in "Ending position" column. But, my model some false positives in the bottom 4 racers. Why? Some of the independent variable are skewed and affects the predictive power of the model. Let me analyze and come back with more accuracy!
+
+All Singapore season (2008 to 2019)
+
+Un-Scaled data reports:
+
+Precision score (All races in Singapore season)
+95.6
+Recall score (All races in Singapore season)
+91.66
+F1 score (All races in Singapore season)
+93.61
+
+Scaled data reports:
+
+Precision score (All races in Singapore season)
+95.6
+Recall score (All races in Singapore season)
+91.66
+F1 score (All races in Singapore season)
+93.61
+
+![Figure-23](images/Picture23.png)
+Figure-23 Predicted results for several years Singapore season.
+
+Findings:
+
+Looking at the different predicted winning probability in different years, Fernando has a 92 % winning probability in 2017 than 2016, which is 33 %.
+
+
+
+Precision and recall graph on scaled data
+
+![Figure-24](images/Picture24.png)
+Figure-24 Precision score versus recall score for various years Singapore season
+
+Findings:
+
+The precision score is gradually increasing from 0.5, and it converges in 0.9. The precision score shows the model performance. High precision score shows the model accuracy. The current precision score is 95.6 %.
+
+Conclusion: 
+
+This part of my research has mostly covered Singapore race 2019 race characteristics and Clustering. Moreover, the predictive power of the model was analyzed. The next part of my research covers the following hypothesis:
+
+1. Top 10 races ranked and given rating score out of 10, based on count of DNF count on each race.
+2. The number of over takings in the race affects the final rating.
+3. Race evolution among the top 5 drivers across different races affects the rating of the race.
+4. The drivers' rank and position affect the rating of the race. 
+
+
+
 
 
 
