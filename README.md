@@ -362,9 +362,3 @@ This part of my research has mostly covered Singapore race 2019 race characteris
 2. The number of over takings in the race affects the final rating.
 3. Race evolution among the top 5 drivers across different races affects the rating of the race.
 4. The drivers' rank and position affect the rating of the race. 
-
-
-
-
-
-
