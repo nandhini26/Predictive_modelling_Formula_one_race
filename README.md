@@ -132,10 +132,17 @@ Age Distribution in Singapore race
 
 ![Figure-8](images/Picture8.png)
 
+
+Figure-8 drivers age in Singapore race
+
 Driver points versus constructor points distribution in Singapore race 
 
 
 ![Figure-9](images/Picture9.png)
+
+
+Figure-9  Driver points versus constructor points distribution in Singapore race in Singapore race
+
 
 
 Findings:
@@ -145,6 +152,8 @@ Constructor points are distributed in the range of 1200 to 3000; however, driver
 Clustering between driver_id, starting grid in Singapore race
 
 ![Figure-10](images/Picture10.png)
+
+
 Figure-10 Clustering between driver_id, starting grid in Singapore race
 
 
@@ -158,6 +167,7 @@ Q: Who is the leading racer in Singapore season?
 Bar graph on driver points across years in Singapore race
 
 ![Figure-11](images/Picture11.png)
+
 
 Figure-11 driver points across years in Singapore race
 
@@ -174,6 +184,8 @@ Clustering between drivers and their points
 
 
 ![Figure-12](images/Picture12.png)
+
+
 Figure-12 Clustering between drivers and their points
 
 Findings:
@@ -184,6 +196,7 @@ Clustering between starting grid and points
 
 
 ![Figure-13](images/Picture13.png)
+
 Figure-13 Clustering between starting grid and points
 
 
@@ -197,6 +210,7 @@ Clustering between total time at pit stop versus total_points
 
 
 ![Figure-14](images/Picture14.png)
+
 Figure-14 Clustering between total time at pit stop versus total_points
 
 
@@ -208,6 +222,7 @@ Drivers who stopped on an average of less than 25000(0.41 minute) milliseconds w
 K means clustering prediction. 
 
 ![Figure-15](images/Picture15.png)
+
 Figure-15 K-means Clustering between 
 
 
@@ -221,7 +236,8 @@ Divers who stopped in between 26000 ns to 30000 ms are likely to score up to mod
 Gaussian Model clustering
 
 ![Figure-16](images/Picture16.png)
-Figure-16 Gaussian Clustering between 
+
+Figure-16 Gaussian Clustering between pit_Stops versus points
 
 Findings:
 
@@ -232,6 +248,7 @@ Drivers who stopped in between 15000ms to 30000 ms can score high points.
 Clustering on drivers age in Singapore race
 
 ![Figure-17](images/Picture17.png)
+
 Figure-17 Clusters in drivers age in Singapore race
 
 
@@ -244,9 +261,10 @@ There are 2 clusters.
 
 Clustering between starting grid versus ending grid
 
+
 ![Figure-18](images/Picture18.png)
-Figure-18 Clusters in drivers starting grids
-in Singapore race
+
+Figure-18 Clusters in drivers starting grids in Singapore race
 
 Findings:
 
@@ -255,7 +273,8 @@ There are no clusters. Drivers who start at different starting grid were able to
 Practice time distribution in Singapore season
 
 ![Figure-19](images/Picture19.png)
-Figure-19 Clusters in drivers age in Singapore race
+
+Figure-19 Practice time distribution in Singapore season
 
 
 Findings:
@@ -267,6 +286,7 @@ Machine Learning Model Results:
 Machine learning prediction without "Ending position"
 
 ![Figure-20](images/Picture20.png)
+
 Figure-20 Model performance
 
 Findings:
@@ -276,6 +296,7 @@ Looking at the different models, Logistic, Gaussian, RF classifier, and decision
 Predicted winning probability with driver names for 2019 with the training set (2008 to 2018)
 
 ![Figure-21](images/Picture21.png)
+
 Figure-21 Predicted Model performance
 
 Findings:
@@ -287,6 +308,7 @@ Looking at the 3 different winning probability range, Lewis, Sabastian, Max, and
 Predicted probability versus actual Singapore season 2019 results
 
 ![Figure-22](images/Picture22.png)
+
 Figure-22 Predicted results versus actual results.
 
 Findings:
@@ -325,6 +347,7 @@ Looking at the different predicted winning probability in different years, Ferna
 Precision and recall graph on scaled data
 
 ![Figure-24](images/Picture24.png)
+
 Figure-24 Precision score versus recall score for various years Singapore season
 
 Findings:
