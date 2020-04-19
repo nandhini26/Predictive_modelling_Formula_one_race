@@ -1,13 +1,33 @@
+Author: 
 
-Predictive Modelling of Singapore Grand Prix race
+Date of completion: MArch 30,2020
+
+This project was my capstone project from the Data Science Diploma Program I completed at BrainStation in Vancouver. I have attached my jupyter notebooks which show all the detail in my work. The following text explains my overall approach and findings of this project.
+
+Topic: Predictive Modelling of Singapore Grand Prix race
 
 Problem Space:
+-----------------------------------------------------------------------------------------------
 
 The Marina Bay Street Circuit, also known as the “Singapore Street Circuit” is a street circuit around Singapore’s Marina Bay, which has been hosting the Singapore Grand Prix every year since 2008. Due to Singapore’s yearly high temperatures, its humidity, and the uneven nature of the street track and the heavy braking zones, the Singapore Circuit represents a physical challenge for both the drivers and cars and it is probably the most demanding race on the F1 calendar. Moreover, it is the longest race of Formula One Grand Prix season, taking up to two hours to complete.
 
+Approach to the problem:
+------------------------------------------------------------------------------------------------
+
+There were 70 seasons(years)in formula one race. Each season hosts 22 races. Each of the races has 20 to 22 drivers and 10 constructors. Annual running cost to host F1 race is $ 58 M and construction cost for running F1 race is $ 280 M.
+There are websites that provide cost information and ratings information about the Formula one series. But most of the blogs are giving information about analytics behind the race and didn't give machine learning approach to the data.
+
+When I searched for publicly available Formula one datasets, I immediately realized that no dataset has labels drivers winning probability and race characetistics impact on the drivers winning. For that reason, I had to engineer the data set with  driver qualities and race qualities.They are as follows:
+
+1.Life time winning,winning percentage,racing experience
+2.practice time,pit stop time
+3.Singapore weather
+
+Due to a lack of a target variable (ie. drivers labeled as win or not), this problem was addressed using unsupervised learning, explained in more detail later. I have divided the project into 3 parts.
+
 Part-1:
 
-The objective of this part of this project is to find the potential drivers for the upcoming Singapore F1 season.
+The objective of this part of this project is to find the potential drivers for the upcoming Singapore F1 race.
         
 Key Technologies Used:
 
@@ -37,7 +57,7 @@ d)	Feature Engineering
 
 
 Background
-
+---------------------------------------------------------------------------------------------
 Getting inspired by watching Netflix F1 documentary movies with my son, I decided to start my journey to do my data analysis and predictive modeling for the upcoming F1 race in Singapore. This will cover the challenges faced during data analysis, learning outcomes from the project, and the results from the machine learning models and predictions. The project started with 6 sections — data mining, data processing and exploration, feature engineering, model building, the final results, and the visualizations. It leads us to questions such as which strategy works well for the fastest driver for every circuits since every circuit has different characteristics like altitude, weather, turns, and curves in the circuits. Every driver has to undergo practice season before their qualifying season. Every final race starting grid depends on their qualifying season position. It is most likely that the starting pole position is highly demanding to secure a podium position.
 
 ![Figure-1 project flow Diagram](images/Picture1.png)
@@ -75,6 +95,7 @@ Since there were 10 years of Singapore Grand Prix data, and each race has ~20 dr
 
 
 Feature Engineering
+--------------------------------------------------------------------------------------------
 
 The primary consideration here for feature engineering is the values for missing qualification 1, qualification 2, and qualification 3 timings. The way qualification stages in Formula One work is that everyone will be racing for the fastest lap in each stage, and the slowest few will be cut off from the next stage. This session will determine the running order at the beginning of the race. This is often called setting the grid. The qualifying session is split into three parts, called Q1, Q2, and Q3. Q1 is 20 minutes long, followed by a seven-minute break. Q2 is 15 minutes long, followed by an eight-minute break. Q3 is 10 minutes long. During each part of qualifying, the fastest lap time set by a car is recorded. Drivers may run as many or as few laps as they wish.
 After Q1 is complete, the eight slowest cars are eliminated (removed from) the qualifying session. This would include any cars that did not set a qualifying time. The remaining 18 car advance (move on to) Q2. The eight cars eliminated are placed in the last eight start positions, based on their fastest time from Q1. The procedure is repeated for Q2. The eight slowest cars from Q2 are placed in the 11 through 18 starting positions on the grid.
